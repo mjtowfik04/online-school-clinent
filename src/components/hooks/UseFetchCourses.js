@@ -7,7 +7,7 @@ const UseFetchCourses =(currentPage)=>{
         const[totalPages,setTotalpages]=useState(0)
     useEffect(()=>{ const 
         fetchCourses = async () => {
-            const url= `/course/?page=${currentPage}`
+            const url= `/api/v1/course/?page=${currentPage}`
         try {
             setLoading(true);
             const response = await apiClient.get(url);
