@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import CategoryItem from "./CategoryItem";
 import apiClient from "../../services/apiClient";
@@ -10,7 +9,7 @@ const Category = () => {
   useEffect(() => {
     setLoading(true);
     apiClient
-      .get("/categories/")
+      .get("/api/v1/categories/")
       .then((res) => {
         setCourses(res.data);
       })

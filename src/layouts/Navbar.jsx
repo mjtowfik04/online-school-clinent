@@ -1,7 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import useAuthContext from "../components/hooks/useAuthContext";
 
 const Navbar = () => {
+  const { user, logoutUser } = useAuthContext();
+
   return (
     <div className="navbar bg-base-100 shadow-sm bg-blend-color">
       {/* Logo section */}
@@ -16,7 +18,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-          <Link to="/class">Class</Link>
+            <Link to="/class">Class</Link>
           </li>
           <li>
             <a href="/about" className="text-black">
@@ -38,7 +40,10 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             {/* Empty button - add icon if needed */}
           </div>
-          <div tabIndex={0} className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
+          <div
+            tabIndex={0}
+            className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
+          >
             <div className="card-body">
               <button className="btn btn-primary btn-block">View cart</button>
             </div>
@@ -46,33 +51,58 @@ const Navbar = () => {
         </div>
 
         {/* Profile dropdown */}
-        <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-              />
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+              <a onClick={logoutUser}>Logout</a>              </li>
+            </ul>
+          </div>
+        ) : (
+          <div>
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <Link
+                to="/login"
+                className="px-6 py-2 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition"
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="px-6 py-2 rounded-xl border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
+              >
+                Register
+              </Link>
             </div>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
-        </div>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
