@@ -15,7 +15,7 @@ const Navbar = ({ sidebarOpen }) => {
         </label>
       </div>
       <div className="flex-1">
-        <Link to="/home">Dashboard</Link>
+        <Link to="/">Dashboard</Link>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">

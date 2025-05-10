@@ -11,7 +11,7 @@ import {
   
   const Sidebar = () => {
     const menuItems = [
-      { to: "/Home", icon: FiBarChart2, label: "Dashboard" },
+      { to: "/", icon: FiBarChart2, label: "Dashboard" },
       { to: "/class", icon: FiPackage, label: "My Class" },
       { to: "/class/add", icon: FiPlusCircle, label: "Add Product" },
       { to: "/Category", icon: FiTag, label: "Categories" },
