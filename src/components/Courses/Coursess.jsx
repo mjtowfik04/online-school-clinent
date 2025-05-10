@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CoursesList from "./CoursesList";
 import Pagination from "./Pagination";
-import useFetchCourses from "../../components/hooks/UseFetchCourses"; 
+import useFetchCourses from "../hooks/UseFetchCourses"; 
 
 
 const Coursess = () => {
