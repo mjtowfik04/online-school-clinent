@@ -10,17 +10,14 @@ import ActivateAccount from "../components/Registration/ActivateAccount";
 import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "../components/PrivateRoute";
 import Profile from "../pages/Profile";
-import Category from "../components/Categorys/Category";
 
 const AppRouters = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="class" element={<Courses />} />
-        <Route path="Category" element={Category}/>
-
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="activate/:uid/:token" element={<ActivateAccount />} />
@@ -35,9 +32,8 @@ const AppRouters = () => {
         }
       >
         <Route index element={<Dashboard />} />
-        <Route path="profile" element={<Profile />} />     
-         </Route>
-
+        <Route path="profile" element={<Profile />} />
+      </Route>
     </Routes>
   );
 };

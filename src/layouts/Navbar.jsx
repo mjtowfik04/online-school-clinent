@@ -8,18 +8,20 @@ const Navbar = () => {
     <div className="navbar bg-base-100 shadow-sm bg-blend-color">
       {/* Logo section */}
       <div className="navbar-start">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">Alo</a>
       </div>
 
       {/* Centered navigation links */}
       <div className="navbar-center">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link to="/dashboard">Home</Link>
-          </li>
-          <li>
-            <Link to="/class">Class</Link>
-          </li>
+          {user&&(<li>
+            <a>Support</a>
+          </li>)}
+          {user && (
+            <li>
+              <Link to="/class">Class</Link>
+            </li>
+          )}
           <li>
             <a href="/about" className="text-black">
               About
@@ -45,7 +47,9 @@ const Navbar = () => {
             className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
           >
             <div className="card-body">
-              <button className="btn btn-primary btn-block">View cart</button>
+              <button className="btn btn-primary btn-block bg-black">
+                View cart
+              </button>
             </div>
           </div>
         </div>
@@ -79,7 +83,8 @@ const Navbar = () => {
                 <Link to="/dashboard">Settings</Link>
               </li>
               <li>
-              <a onClick={logoutUser}>Logout</a></li>
+                <a onClick={logoutUser}>Logout</a>
+              </li>
             </ul>
           </div>
         ) : (
