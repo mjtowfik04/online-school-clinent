@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="navbar-center">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/dashboard">Home</Link>
           </li>
           <li>
             <Link to="/class">Class</Link>
@@ -69,17 +69,17 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
+              {/* <li>
+              <Link to="profile" className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </Link>
+              </li> */}
               <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
+                <Link to="/dashboard">Settings</Link>
               </li>
               <li>
-                <a>Settings</a>
-              </li>
-              <li>
-              <a onClick={logoutUser}>Logout</a>              </li>
+              <a onClick={logoutUser}>Logout</a></li>
             </ul>
           </div>
         ) : (

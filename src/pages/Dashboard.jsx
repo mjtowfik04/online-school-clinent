@@ -1,10 +1,9 @@
-const Dashboard = () => {
+import Order from "../components/Dashboard/Order";
+
+export default function Dashboard() {
   return (
     <div>
-      <h1>He</h1>
-      
+      <Order/>
     </div>
   );
-};
-
-export default Dashboard;
+}
