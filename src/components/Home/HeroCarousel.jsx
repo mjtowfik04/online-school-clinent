@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react" // Assuming lucide-react is installed
-import fashinon from "../../assets/images/fashion.png"
+import read from "../../assets/images/read.png"
 const HeroCarousel = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-[#e6f7f2] to-[#fde8e8] overflow-hidden">
@@ -55,7 +55,7 @@ const HeroCarousel = () => {
             {/* Main Image */}
             <div className="relative h-[400px] md:h-[500px] lg:h-[550px] w-full">
               <img
-                src={fashinon} 
+                src={read} 
                 alt="My Local Photo"
                 className="object-contain w-full h-full"
               />
