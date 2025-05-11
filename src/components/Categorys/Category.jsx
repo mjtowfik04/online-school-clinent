@@ -23,6 +23,10 @@ const Category = () => {
 
   return (
     <>
+    <div className="text-3xl font-bold text-center my-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 drop-shadow-md tracking-wide">
+        All Categories
+      </div>
+    
       {loading ? (
         <div className="flex justify-center items-center">
           <span className="loading loading-spinner loading-md"></span>
