@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import MainLayout from "../layouts/MainLayout";
-import DashboardLayout from "../layouts/DashboardLayout"; // ✅ Make sure this is added
+import DashboardLayout from "../layouts/DashboardLayout"; 
 import About from "../pages/About";
 import Home from "../pages/Home";
 import Courses from "../pages/Courses";
@@ -10,6 +10,9 @@ import ActivateAccount from "../components/Registration/ActivateAccount";
 import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "../components/PrivateRoute";
 import Profile from "../pages/Profile";
+import ProductDetail from "../pages/ProductDetail";
+import Cart from "../pages/Cart";
+import Order from "../pages/Order";
 
 const AppRouters = () => {
   return (
@@ -21,6 +24,7 @@ const AppRouters = () => {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="activate/:uid/:token" element={<ActivateAccount />} />
+        <Route path="class/:courseId" element={<ProductDetail/>} />
       </Route>
 
       <Route
@@ -33,6 +37,8 @@ const AppRouters = () => {
       >
         <Route index element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="cart" element={<Cart/>} />         
+        <Route path="order" element={<Order/>} />         
       </Route>
     </Routes>
   );

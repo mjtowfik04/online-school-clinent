@@ -1,9 +1,11 @@
+import { Link } from "react-router";
 import defaultIme from "../../assets/images/default.jpg";
 
 const AllCoures = ({ course }) => {
   if (!course) return null;
 
   return (
+<Link to={`/class/${course.id}`}>
     <div className="card bg-white w-96 shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
   <figure className="relative px-10 pt-10">
     <img
@@ -30,6 +32,7 @@ const AllCoures = ({ course }) => {
     </div>
   </div>
 </div>
+    </Link>
 
 
   );
