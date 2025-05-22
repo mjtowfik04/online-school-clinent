@@ -16,8 +16,6 @@ import {
       { to: "/class/add", icon: FiPlusCircle, label: "Add Product" },
       { to: "/Category", icon: FiTag, label: "Categories" },
       { to: "/categories/add", icon: FiPlusCircle, label: "Add Category" },
-      { to: "/dashboard/cart", icon: FiShoppingCart, label: "Cart" },
-      { to: "/dashboard/order", icon: FiShoppingCart, label: "Orders" },
       { to: "/reviews", icon: FiStar, label: "Reviews" },
       { to: "/users", icon: FiUsers, label: "Users" },
     ];
@@ -31,8 +29,7 @@ import {
         <aside className="menu bg-base-200 w-64 min-h-full p-4 text-base-content">
           {/* Sidebar header */}
           <div className="flex items-center gap-2 mb-6 px-2">
-            <FiShoppingCart className="h-6 w-6" />
-            <h1 className="text-xl font-bold">PhiMart</h1>
+            <h1 className="text-xl font-bold">Alo</h1>
           </div>
   
           {/* Sidebar menu */}

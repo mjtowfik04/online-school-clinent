@@ -20,15 +20,15 @@ const AllCoures = ({ course }) => {
     
     {/* Price Section */}
     <div className="mt-4">
-      <h1 className="text-lg font-medium text-gray-700">Price:</h1>
-      <p className="text-3xl font-bold text-green-600 mt-1">${course.price}</p>
+      <h1 className="text-lg font-medium text-gray-700"></h1>
+      <p className="text-3xl font-bold text-green-600 mt-1">{}</p>
     </div>
 
     {/* Buy Now Button */}
     <div className="card-actions mt-6">
-      <button className="btn bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-600 hover:to-indigo-500">
+      {/* <button className="btn bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-600 hover:to-indigo-500">
         Buy Now
-      </button>
+      </button> */}
     </div>
   </div>
 </div>

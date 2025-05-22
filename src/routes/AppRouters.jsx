@@ -11,8 +11,8 @@ import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "../components/PrivateRoute";
 import Profile from "../pages/Profile";
 import ProductDetail from "../pages/ProductDetail";
-import Cart from "../pages/Cart";
-import Order from "../pages/Order";
+import PaymentSuccess from "../pages/paymentSuccess";
+
 
 const AppRouters = () => {
   return (
@@ -36,9 +36,8 @@ const AppRouters = () => {
         }
       >
         <Route index element={<Dashboard />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="cart" element={<Cart/>} />         
-        <Route path="order" element={<Order/>} />         
+        <Route path="profile" element={<Profile />} />      
+        <Route path="payment/success/" element={<PaymentSuccess/>} />      
       </Route>
     </Routes>
   );
